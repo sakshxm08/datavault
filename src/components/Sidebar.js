@@ -1,5 +1,5 @@
 import React from "react";
-import { logo, userImg } from "../assets";
+import { userImg } from "../assets";
 import { FaUserLock, FaUsers, FaCloudUploadAlt } from "react-icons/fa";
 import { MdFavorite } from "react-icons/md";
 import { AiFillSetting } from "react-icons/ai";
