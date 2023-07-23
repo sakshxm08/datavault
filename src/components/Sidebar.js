@@ -1,11 +1,18 @@
 import React from "react";
-import { userImg } from "../assets";
+import { logo, userImg } from "../assets";
 import { FaUserLock, FaUsers, FaCloudUploadAlt } from "react-icons/fa";
 import { MdFavorite } from "react-icons/md";
 import { AiFillSetting } from "react-icons/ai";
 import { FiLogOut } from "react-icons/fi";
+import { signOut } from "firebase/auth";
+import { useNavigate } from "react-router-dom";
+import { auth } from "../firebase";
 
 export const Sidebar = () => {
+  const navigate = useNavigate();
+  const logout = () => {
+    signOut(auth).then(navigate("/"));
+  };
   return (
     <div className="h-screen sticky top-0 left-0 w-max bg-sky-900 flex flex-col justify-between py-10 text-white font-titleFont tracking-wide">
       <div className="flex flex-col gap-8">
@@ -42,7 +49,10 @@ export const Sidebar = () => {
           <AiFillSetting className="text-lg" />
           Settings
         </span>
-        <span className="flex gap-4 py-3 pl-8 pr-16 items-center duration-200 cursor-pointer hover:bg-sky-950">
+        <span
+          onClick={logout}
+          className="flex gap-4 py-3 pl-8 pr-16 items-center duration-200 cursor-pointer hover:bg-sky-950"
+        >
           <FiLogOut className="text-lg" />
           Logout
         </span>

@@ -7,6 +7,7 @@ import {
   ScrollRestoration,
 } from "react-router-dom";
 import { Home } from "./pages/Home";
+import { Error } from "./pages/Error";
 
 const Layout = () => {
   return (
@@ -22,7 +23,7 @@ function App() {
     {
       path: "/",
       element: <Layout />,
-
+      errorElement: <Error />,
       children: [
         {
           path: "/",
