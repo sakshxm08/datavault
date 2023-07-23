@@ -7,15 +7,42 @@ import { HiDocumentDuplicate } from "react-icons/hi";
 
 export const Categories = () => {
   const categories = [
-    { name: "Pictures", files: 180, color: "purple", icon: AiTwotoneCamera },
+    {
+      name: "Pictures",
+      files: 180,
+      bgColor: "bg-purple-500/90",
+      textColor: "text-purple-500/90",
+      hoverTextColor: "group-hover:text-purple-600",
+      hoverBgColor: "hover:bg-purple-600",
+      icon: AiTwotoneCamera,
+    },
     {
       name: "Documents",
       files: 20,
-      color: "emerald",
+      bgColor: "bg-emerald-500/90",
+      textColor: "text-emerald-500/90",
+      hoverTextColor: "group-hover:text-emerald-600",
+      hoverBgColor: "hover:bg-emerald-600",
       icon: HiDocumentDuplicate,
     },
-    { name: "Videos", files: 40, color: "amber", icon: BsFillCameraVideoFill },
-    { name: "Audio", files: 10, color: "blue", icon: MdOutlineAudiotrack },
+    {
+      name: "Videos",
+      files: 40,
+      bgColor: "bg-amber-500/90",
+      textColor: "text-amber-500/90",
+      hoverTextColor: "group-hover:text-amber-600",
+      hoverBgColor: "hover:bg-amber-600",
+      icon: BsFillCameraVideoFill,
+    },
+    {
+      name: "Audio",
+      files: 10,
+      bgColor: "bg-blue-500/90",
+      textColor: "text-blue-500/90",
+      hoverTextColor: "group-hover:text-blue-600",
+      hoverBgColor: "hover:bg-blue-600",
+      icon: MdOutlineAudiotrack,
+    },
   ];
 
   return (

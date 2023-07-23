@@ -3,7 +3,7 @@ import { BsCloudUploadFill } from "react-icons/bs";
 import { userImg, userImg2, userImg3 } from "../assets";
 
 export const RightSide = () => {
-  const storageUsed = "70";
+  const storageUsed = "80";
   return (
     <div className="sticky top-10 flex flex-col gap-4">
       <div className="bg-white  h-fit rounded-3xl p-4 flex flex-col gap-4">
@@ -19,7 +19,7 @@ export const RightSide = () => {
               Your storage
             </span>
             <span className="font-bodyFont text-sm font-semibold text-sky-800">
-              25% left
+              {100 - storageUsed}% left
             </span>
           </div>
           <div className="flex flex-col gap-3">
