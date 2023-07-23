@@ -1,8 +1,8 @@
 import React from "react";
 export const Category = ({ category, icon: Icon }) => {
-  const style = {
-    backgroundColor: category.color,
-  };
+  // const style = {
+  //   backgroundColor: category.color,
+  // };
   return (
     <div
       className={`flex flex-col gap-4 rounded-2xl ${category.bgColor} group ${category.hoverBgColor} transition-all active:scale-95 duration-200 cursor-pointer p-4 h-fit w-40`}
