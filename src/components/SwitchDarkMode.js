@@ -53,7 +53,7 @@ const MaterialUISwitch = styled(Switch)(({ theme }) => ({
 }));
 
 export default function SwitchDarkMode() {
-  const [darkMode, setDarkMode] = React.useState(false);
+  const [darkMode, setDarkMode] = React.useState(true);
   React.useEffect(() => {
     document.getElementsByTagName("html")[0].classList.toggle("dark");
   }, [darkMode]);
