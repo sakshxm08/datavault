@@ -1,5 +1,4 @@
 import React from "react";
-import { userImg } from "../assets";
 import { FaUserLock, FaUsers, FaCloudUploadAlt } from "react-icons/fa";
 import { MdFavorite } from "react-icons/md";
 import { AiFillSetting } from "react-icons/ai";
@@ -7,26 +6,41 @@ import { FiLogOut } from "react-icons/fi";
 import { signOut } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import { auth } from "../firebase";
+import { useAuthState } from "react-firebase-hooks/auth";
+import { userImg } from "../assets";
 
 export const Sidebar = () => {
+  const [user] = useAuthState(auth);
   const navigate = useNavigate();
   const logout = () => {
     signOut(auth).then(navigate("/"));
   };
   return (
-    <div className="h-screen sticky top-0 left-0 w-max bg-sky-900 flex flex-col justify-between py-10 text-white font-titleFont tracking-wide">
+    <div className="h-screen sticky top-0 left-0 w-max bg-sky-900 dark:bg-gray-900 flex flex-col justify-between py-10 text-white font-titleFont tracking-wide">
       <div className="flex flex-col gap-8">
         <div className=" flex flex-col gap-4  justify-center items-center w-full">
-          <img src={userImg} className="w-20 rounded-full" alt="" />
+          <img
+            src={user ? user.photoURL : userImg}
+            className="w-20 rounded-full"
+            alt=""
+          />
           <div className="flex flex-col gap-1 items-center justify-center font-bodyFont">
-            <span className="text-xl">Saksham Gambhir</span>
-            <span className="text-gray-400 px-3 text-sm">
-              saksham2211gambhir@gmail.com
+            <span className="text-xl">
+              {user
+                ? user.displayName.split(" ")[0].charAt(0).toUpperCase() +
+                  user.displayName.split(" ")[0].slice(1) +
+                  " " +
+                  user.displayName.split(" ")[1].charAt(0).toUpperCase() +
+                  user.displayName.split(" ")[1].slice(1)
+                : "Please Login"}
+            </span>
+            <span className="text-gray-400 px-3 text-sm whitespace-nowrap overflow-hidden text-ellipsis w-64 text-center">
+              {user ? user.email : ""}
             </span>
           </div>
         </div>
-        <div className="flex flex-col text-base ">
-          <span className="flex gap-4 py-3 pl-8 pr-16 items-center duration-200 cursor-pointer hover:bg-sky-950">
+        <div className="flex flex-col text-base whitespace-nowrap">
+          <span className="flex gap-4 py-3 pl-8 pr-16  items-center duration-200 cursor-pointer hover:bg-sky-950">
             <FaUserLock />
             My Vault
           </span>

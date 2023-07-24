@@ -38,7 +38,7 @@ export const Recent = () => {
 
   return (
     <div className="flex flex-col gap-4">
-      <h1 className="font-bodyFont text-2xl font-extrabold text-sky-950">
+      <h1 className="font-bodyFont text-2xl font-extrabold text-sky-950 dark:text-sky-100">
         Recent Files
       </h1>
       <div className="flex gap-4 flex-col">

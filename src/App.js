@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import { Home } from "./pages/Home";
 import { Error } from "./pages/Error";
+// import SwitchDarkMode from "./components/SwitchDarkMode";
+import Menubar from "./components/Menubar";
 
 const Layout = () => {
   return (
@@ -33,12 +35,16 @@ function App() {
           path: "/cloud",
           element: <Cloud />,
         },
+        {
+          path: "/try",
+          element: <Menubar />,
+        },
       ],
     },
   ]);
   return (
     <>
-      <div className="relative font-bodyFont">
+      <div className="relative font-bodyFont bg-sky-50 dark:bg-gray-900">
         <RouterProvider router={router} />
       </div>
     </>
