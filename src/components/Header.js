@@ -6,6 +6,7 @@ import { Box, SwipeableDrawer } from "@mui/material";
 import { Sidebar } from "./Sidebar";
 import { Link } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
+import { logo } from "../assets";
 
 export const Header = () => {
   const [state, setState] = useState({
@@ -43,7 +44,7 @@ export const Header = () => {
     </Box>
   );
   return (
-    <div className="fixed top-0 flex items-center h-20 w-screen justify-evenly gap-10 bg-sky-100 dark:bg-gray-800 shadow dark:shadow-lg">
+    <div className="z-50 fixed top-0 flex items-center h-20 w-screen justify-evenly gap-10 bg-sky-100 dark:bg-gray-800 shadow dark:shadow-lg">
       <Fragment key={"left"}>
         <Menu
           fontSize="large"
@@ -63,13 +64,11 @@ export const Header = () => {
       <Search />
       <div className="flex gap-8 font-titleFont">
         <Link to="/">
-          <span className="dark:text-sky-50 dark:hover:text-sky-200 dark:hover:after:bg-sky-200 text-sky-800 hover:text-sky-950 duration-200 flex flex-col gap-1 pt-1 after:w-full after:h-[2px] after:duration-200 after:scale-x-0 hover:after:scale-x-100 after:bg-sky-950 cursor-pointer">
-            Home
-          </span>
+          {/* <span className="dark:text-sky-50 dark:hover:text-sky-200 dark:hover:after:bg-sky-200 text-sky-800 hover:text-sky-950 duration-200 flex flex-col gap-1 pt-1 after:w-full after:h-[2px] after:duration-200 after:scale-x-0 hover:after:scale-x-100 after:bg-sky-950 cursor-pointer">
+            DataVault
+          </span> */}
+          <img src={logo} className="w-12" alt="" />
         </Link>
-        <span className="dark:text-sky-50 dark:hover:text-sky-200 dark:hover:after:bg-sky-200 text-sky-800 hover:text-sky-950 duration-200 flex flex-col gap-1 pt-1 after:w-full after:h-[2px] after:duration-200 after:scale-x-0 hover:after:scale-x-100 after:bg-sky-950 cursor-pointer">
-          About
-        </span>
       </div>
       <SwitchDarkMode className="mx-10 cursor-pointer" />
     </div>

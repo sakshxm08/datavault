@@ -2,41 +2,27 @@ import React from "react";
 import { BsCloudUploadFill } from "react-icons/bs";
 import { userImg, userImg2, userImg3 } from "../assets";
 import { Avatar, AvatarGroup } from "@mui/material";
+import { Storage } from "./Storage";
 
 export const RightSide = () => {
-  const storageUsed = "80";
-  const storageClass = `w-[${storageUsed}%]`;
   return (
-    <div className="sticky top-28 flex flex-col gap-4">
-      <div className="bg-white dark:bg-gray-700 h-fit rounded-3xl p-4 flex flex-col gap-4">
-        <div className="w-full py-16 flex flex-col gap-4 justify-center items-center bg-sky-100 dark:bg-gray-800 rounded-3xl hover:bg-sky-200 dark:hover:bg-gray-950 duration-200 cursor-pointer">
+    <div className=" sticky top-28 flex flex-col gap-4">
+      <div className="shadow-lg bg-white dark:bg-gray-700 h-fit rounded-3xl p-4 flex flex-col gap-4">
+        <div className="w-full py-16 flex flex-col gap-4 justify-center items-center bg-sky-100 dark:bg-gray-800 rounded-3xl hover:bg-sky-200 dark:hover:bg-gray-900 duration-200 cursor-pointer">
           <BsCloudUploadFill className="text-5xl text-sky-950 dark:text-sky-50" />
           <span className="font-titleFont font-medium text-lg dark:text-sky-50">
             Add new files
           </span>
         </div>
-        <div className="w-full p-4 flex flex-col gap-4 bg-sky-100 dark:bg-gray-800 rounded-3xl">
-          <div className="flex justify-between items-center">
-            <span className="font-titleFont text-base font-bold dark:text-sky-50">
-              Your storage
-            </span>
-            <span className="font-bodyFont text-sm font-semibold text-sky-800 dark:text-sky-400">
-              {100 - storageUsed}% left
-            </span>
-          </div>
-          <div className="flex flex-col gap-3">
-            <span className="font-bodyFont font-medium text-sky-700 dark:text-sky-300 text-sm">
-              {storageUsed} GB of 100 GB used
-            </span>
-            <div class="w-full h-2 bg-blue-200 rounded-full">
-              <div
-                class={`${storageClass} h-full text-center text-xs text-white bg-blue-600 rounded-full`}
-              ></div>
-            </div>
-          </div>
-        </div>
+        <Storage
+          bg={"bg-sky-100 dark:bg-gray-800"}
+          text={"text-sky-950 dark:text-sky-50"}
+          textSmall={"text-sky-700 dark:text-sky-300"}
+          textDiff={"text-sky-800 dark:text-sky-400"}
+          barClr="bg-blue-600"
+        />
       </div>
-      <div className="bg-white dark:bg-gray-700 h-fit rounded-3xl p-4 flex flex-col gap-4">
+      <div className="shadow-lg bg-white dark:bg-gray-700 h-fit rounded-3xl p-4 flex flex-col gap-4">
         <div className="w-full p-4 flex flex-col gap-4 bg-sky-100 dark:bg-gray-800 rounded-2xl">
           <span className="font-titleFont text-base font-bold dark:text-sky-50">
             Your shared folders

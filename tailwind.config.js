@@ -7,7 +7,12 @@ module.exports = {
       titleFont: ["Raleway", "sans-serif"],
       bodyFont: ["Lato", "sans-serif"],
     },
-    extend: {},
+
+    extend: {
+      screens: {
+        mobile: "468px",
+      },
+    },
   },
   plugins: [],
 };

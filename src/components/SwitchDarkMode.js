@@ -60,10 +60,15 @@ export default function SwitchDarkMode() {
     document.getElementsByTagName("html")[0].classList.toggle("dark");
     setDarkMode(!darkMode);
   };
+  React.useEffect(() => {
+    document.getElementsByTagName("html")[0].classList.contains("dark")
+      ? setDarkMode(true)
+      : setDarkMode(false);
+  }, [darkMode]);
   return (
     <FormGroup>
       <FormControlLabel
-        control={<MaterialUISwitch sx={{ m: 1 }} />}
+        control={<MaterialUISwitch sx={{ m: 1 }} checked={darkMode} />}
         onChange={toggleDark}
       />
     </FormGroup>

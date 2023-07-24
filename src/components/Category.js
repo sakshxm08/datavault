@@ -5,7 +5,7 @@ export const Category = ({ category, icon: Icon }) => {
   // };
   return (
     <div
-      className={`flex flex-col gap-4 rounded-2xl ${category.bgColor} group ${category.hoverBgColor} ${category.darkBgColor} ${category.darkHoverBgColor} transition-all active:scale-95 duration-200 cursor-pointer p-4 h-fit w-40`}
+      className={`shadow-xl flex flex-col gap-4 rounded-2xl ${category.bgColor} group ${category.hoverBgColor} ${category.darkBgColor} ${category.darkHoverBgColor} transition-all active:scale-95 duration-200 cursor-pointer p-4 h-fit w-40`}
       // className={`flex flex-col gap-4 rounded-2xl bg-${category.color}-500/90 group hover:bg-${category.color}-600 transition-all active:scale-95 duration-200 cursor-pointer p-4 h-fit w-40`}
     >
       <div className="flex">

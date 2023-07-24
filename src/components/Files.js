@@ -3,6 +3,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import { BsArchive, BsFiles } from "react-icons/bs";
 import { TbSchool } from "react-icons/tb";
 import { FileType } from "./FileType";
+import { AddFile } from "./AddFile";
 
 export const Files = () => {
   const files = [
@@ -53,12 +54,7 @@ export const Files = () => {
         {files.map((type) => (
           <FileType type={type} icon={type.icon} />
         ))}
-        <div
-          //   className={`flex flex-col gap-4 rounded-2xl bg-emerald-500/90 p-4 h-fit w-40`}
-          className={`flex items-center justify-center h-full gap-2 rounded-2xl text-sky-900 dark:text-sky-100 dark:hover:bg-sky-950/70 bg-sky-50 dark:bg-sky-950 hover:bg-sky-200 transition-all active:scale-95 duration-200 cursor-pointer p-4 text-4xl font-light w-40`}
-        >
-          +
-        </div>
+        <AddFile width="w-40" />
       </div>
     </div>
   );
