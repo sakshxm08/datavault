@@ -66,7 +66,7 @@ export const Categories = () => {
       <h1 className="font-bodyFont text-2xl font-extrabold text-sky-950 dark:text-sky-100">
         Categories
       </h1>
-      <div className="flex gap-4">
+      <div className="grid grid-cols-2 min-[580px]:grid-cols-4 gap-4">
         {categories.map((category) => (
           <Category category={category} icon={category.icon} />
         ))}

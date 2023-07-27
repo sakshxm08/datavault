@@ -9,10 +9,12 @@ import {
 import { Home } from "./routes/Home";
 import { Error } from "./routes/Error";
 // import SwitchDarkMode from "./components/SwitchDarkMode";
-import Menubar from "./components/Menubar";
-import { MainPage } from "./pages/MainPage";
-import { SharedPage } from "./pages/SharedPage";
+import { Menubar } from "./components/Menubar";
+import { MainPage } from "./pages/cloud/MainPage";
+import { SharedPage } from "./pages/cloud/SharedPage";
 import { Footer } from "./components/Footer";
+import { FavoritesPage } from "./pages/cloud/FavoritesPage";
+import { UploadPage } from "./pages/cloud/UploadPage";
 
 const Layout = () => {
   return (
@@ -50,6 +52,11 @@ function App() {
             {
               path: "shared",
               element: <SharedPage />,
+            },
+            { path: "favorites", element: <FavoritesPage /> },
+            {
+              path: "upload",
+              element: <UploadPage />,
             },
           ],
         },

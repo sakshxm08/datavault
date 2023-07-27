@@ -67,6 +67,7 @@ const logOut = () => {
 };
 
 export {
+  app,
   auth,
   googleProvider,
   githubProvider,

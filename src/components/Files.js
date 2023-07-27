@@ -50,12 +50,13 @@ export const Files = () => {
       <h1 className="font-bodyFont text-2xl font-extrabold text-sky-950 dark:text-sky-100">
         Files
       </h1>
-      <div className="flex gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-4">
         {files.map((type) => (
           <FileType type={type} icon={type.icon} />
         ))}
-        <AddFile width="w-40" />
+        <AddFile width="w-full" display="md:flex hidden" />
       </div>
+      <AddFile width="w-full" display="md:hidden flex" />
     </div>
   );
 };

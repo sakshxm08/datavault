@@ -3,7 +3,7 @@ import { TfiMoreAlt } from "react-icons/tfi";
 import { BiSolidShareAlt } from "react-icons/bi";
 export const RecentFile = ({ type, icon: Icon }) => {
   return (
-    <div className="shadow p-3 flex gap-4 items-center justify-between bg-white dark:bg-sky-800 rounded-lg">
+    <div className="shadow p-3 hidden min-[580px]:flex gap-4 items-center justify-between bg-white dark:bg-sky-800 rounded-lg">
       <div className="flex gap-4 items-center w-48">
         <span
           className={`bg-${type.color}-500/90 text-base p-3 rounded-lg text-white dark:text-gray-800 aspect-square w-fit flex justify-center items-center`}

@@ -53,14 +53,18 @@ export const Sidebar = () => {
               Shared files
             </span>
           </Link>
-          <span className="flex gap-4 py-3 pl-8 pr-16 items-center duration-200 cursor-pointer hover:bg-sky-950 dark:hover:bg-sky-900">
-            <MdFavorite />
-            Favorites
-          </span>
-          <span className="flex gap-4 py-3 pl-8 pr-16 items-center duration-200 cursor-pointer hover:bg-sky-950 dark:hover:bg-sky-900">
-            <FaCloudUploadAlt />
-            Upload files
-          </span>
+          <Link to="favorites">
+            <span className="flex gap-4 py-3 pl-8 pr-16 items-center duration-200 cursor-pointer hover:bg-sky-950 dark:hover:bg-sky-900">
+              <MdFavorite />
+              Favorites
+            </span>
+          </Link>
+          <Link to="upload">
+            <span className="flex gap-4 py-3 pl-8 pr-16 items-center duration-200 cursor-pointer hover:bg-sky-950 dark:hover:bg-sky-900">
+              <FaCloudUploadAlt />
+              Upload files
+            </span>
+          </Link>
         </div>
       </div>
       <div className="px-4">

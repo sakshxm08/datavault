@@ -4,7 +4,7 @@ export const FileType = ({ type, icon: Icon }) => {
   return (
     <div
       //   className={`flex flex-col gap-4 rounded-2xl bg-emerald-500/90 p-4 h-fit w-40`}
-      className={`shadow-xl flex flex-col gap-2 rounded-2xl bg-white dark:bg-sky-800 group hover:bg-gray-100 dark:hover:bg-sky-900 transition-all active:scale-95 duration-200 cursor-pointer p-4 h-fit w-40`}
+      className={`shadow-xl flex flex-col gap-2 rounded-2xl bg-white dark:bg-sky-800 group hover:bg-gray-100 dark:hover:bg-sky-900 transition-all active:scale-95 duration-200 cursor-pointer p-4 h-fit w-full`}
     >
       <div className="flex">
         <span

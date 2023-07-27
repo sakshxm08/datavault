@@ -1,3 +1,4 @@
+import { RecentFileSmall } from "./RecentFIleSmall";
 import { RecentFile } from "./RecentFile";
 
 export const Recent = ({ heading, recent }) => {
@@ -7,9 +8,14 @@ export const Recent = ({ heading, recent }) => {
         {heading}
       </h1>
       <div className="flex gap-4 flex-col">
-        {recent.map((type) => (
-          <RecentFile type={type} icon={type.icon} />
-        ))}
+        {recent.map((type) => {
+          return (
+            <>
+              <RecentFile type={type} icon={type.icon} />
+              <RecentFileSmall type={type} icon={type.icon} />
+            </>
+          );
+        })}
       </div>
     </div>
   );
